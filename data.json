@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1001,
+    "name": "Tanveer Ahmed",
+    "designation": "Frontend Developer",
+    "salary": 30000,
+    "city": "Siwan",
+    "state": "Bihar"
+  },
+  {
+    "id": 1002,
+    "name": "Saurabh Singh",
+    "designation": "Marine Engineer",
+    "salary": 90000,
+    "city": "Faridabad",
+    "state": "Haryana"
+  },
+  {
+    "id": 1003,
+    "name": "Manish Patel",
+    "designation": "Chartered Accountant",
+    "salary": 45000,
+    "city": "Delhi",
+    "state": "Delhi"
+  },
+  {
+    "id": 1004,
+    "name": "Danish Ansari",
+    "designation": "Loco Pilot",
+    "salary": 80000,
+    "city": "Kolkata",
+    "state": "West Bengal"
+  },
+  {
+    "id": 1005,
+    "name": "Zishan Ali",
+    "designation": "Businessman",
+    "salary": 95000,
+    "city": "Noida",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "id": 1006,
+    "name": "Amit Kumar",
+    "designation": "Backend Developer",
+    "salary": 40000,
+    "city": "Patna",
+    "state": "Bihar"
+  },
+  {
+    "id": 1007,
+    "name": "Rahul Verma",
+    "designation": "Software Engineer",
+    "salary": 70000,
+    "city": "Bangalore",
+    "state": "Karnataka"
+  },
+  {
+    "id": 1008,
+    "name": "Pooja Sharma",
+    "designation": "HR Manager",
+    "salary": 50000,
+    "city": "Mumbai",
+    "state": "Maharashtra"
+  },
+  {
+    "id": 1009,
+    "name": "Neha Gupta",
+    "designation": "UI/UX Designer",
+    "salary": 55000,
+    "city": "Jaipur",
+    "state": "Rajasthan"
+  },
+  {
+    "id": 1010,
+    "name": "Arjun Mehta",
+    "designation": "Data Analyst",
+    "salary": 60000,
+    "city": "Hyderabad",
+    "state": "Telangana"
+  }
+]
