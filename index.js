@@ -141,18 +141,158 @@
 //   console.log("Server is Running at http://localhost:8000"),
 // );
 
+// const express = require("express");
+// let fs = require("fs");
+
+// const app = express();
+
+// app.get("/", (req, res) => {
+//   res.send("<h2>This is Home Page</h2>");
+// });
+
+// app.get("/data", (req, res) => {
+//   let data = fs.readFileSync("data.json", "utf-8");
+//   res.send(JSON.parse(data));
+// });
+
+// app.use((req, res) => {
+//   res.status(404).send("<h2>404! Page Not Found</h2>");
+// });
+
+// app.listen(8000, () => {
+//   console.log("Server is Running at http://localhost:8000");
+// });
+
+//**************************Templace Engine with Express********************************
+
+// const express = require("express");
+// const app = express();
+// // app.set('view engine', 'hbs')
+
+// app.get("", (req, res) => {
+//   const name = "Tanveer Ahmed";
+//   const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+//   let data = [
+//     {
+//       id: 1001,
+//       name: "Tanveer Ahmed",
+//       designation: "Frontend Developer",
+//       salary: 30000,
+//       city: "Siwan",
+//       state: "Bihar",
+//     },
+//     {
+//       id: 1002,
+//       name: "Saurabh Singh",
+//       designation: "Marine Engineer",
+//       salary: 90000,
+//       city: "Faridabad",
+//       state: "Haryana",
+//     },
+//     {
+//       id: 1003,
+//       name: "Manish Patel",
+//       designation: "Chartered Accountant",
+//       salary: 45000,
+//       city: "Delhi",
+//       state: "Delhi",
+//     },
+//     {
+//       id: 1004,
+//       name: "Danish Ansari",
+//       designation: "Loco Pilot",
+//       salary: 80000,
+//       city: "Kolkata",
+//       state: "West Bengal",
+//     },
+//     {
+//       id: 1005,
+//       name: "Zishan Ali",
+//       designation: "Businessman",
+//       salary: 95000,
+//       city: "Noida",
+//       state: "Uttar Pradesh",
+//     },
+//     {
+//       id: 1006,
+//       name: "Amit Kumar",
+//       designation: "Backend Developer",
+//       salary: 40000,
+//       city: "Patna",
+//       state: "Bihar",
+//     },
+//     {
+//       id: 1007,
+//       name: "Rahul Verma",
+//       designation: "Software Engineer",
+//       salary: 70000,
+//       city: "Bangalore",
+//       state: "Karnataka",
+//     },
+//     {
+//       id: 1008,
+//       name: "Pooja Sharma",
+//       designation: "HR Manager",
+//       salary: 50000,
+//       city: "Mumbai",
+//       state: "Maharashtra",
+//     },
+//     {
+//       id: 1009,
+//       name: "Neha Gupta",
+//       designation: "UI/UX Designer",
+//       salary: 55000,
+//       city: "Jaipur",
+//       state: "Rajasthan",
+//     },
+//     {
+//       id: 1010,
+//       name: "Arjun Mehta",
+//       designation: "Data Analyst",
+//       salary: 60000,
+//       city: "Hyderabad",
+//       state: "Telangana",
+//     },
+//   ];
+//   res.render("index.hbs", {
+//     name: name,
+//     arr: arr,
+//     data: data,
+//   });
+// });
+
+// app.use((req, res) => {
+//   res.status(404).send("<h2>404! Page Not Found</h2>");
+// });
+
+// app.listen(8000, () => {
+//   console.log("Server is Running at http://localhost:8000");
+// });
+
 const express = require("express");
-let fs = require("fs");
-
 const app = express();
+const bodyParser = require("body-parser");
+const encoder = new bodyParser.urlencoded();
 
-app.get("/", (req, res) => {
-  res.send("<h2>This is Home Page</h2>");
+app.use("/public", express.static("public"));
+
+app.get("", (req, res) => {
+  res.render("home.hbs", {
+    show: false,
+    output: "",
+  });
 });
 
-app.get("/data", (req, res) => {
-  let data = fs.readFileSync("data.json", "utf-8");
-  res.send(JSON.parse(data));
+app.post("", encoder, (req, res) => {
+  // console.log(req.body);
+  if (req.body.option === "1")
+    var output = req.body.message.split("").reverse().join("");
+  else var output = req.body.message.split("").reverse().join("");
+
+  res.render("home.hbs", {
+    show: true,
+    output: output,
+  });
 });
 
 app.use((req, res) => {

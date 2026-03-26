@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <h1>This is Home Page</h1>
+  <h2>Name : {{name}}</h2>
+  <h2>Array : {{arr}}</h2>
+
+  <table border="2px" cellpadding="10px" cellspacing="0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salery</th>
+        <th>City</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    {{#each data}}
+    <tbody>
+      <tr>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{designation}}</td>
+        <td>{{salary}}</td>
+        <td>{{city}}</td>
+        <td>{{state}}</td>
+      </tr>
+    </tbody>
+    {{/each}}
+  </table>
+</body>
+</html>

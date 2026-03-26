@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="center">
+      <h1>Form Example</h1>
+      <form action="/" method="post">
+         <input type="text"  name="message" placeholder="Enter the Message">
+         <select name="option">
+          <option value="1">Reverse the String</option>
+          <option value="2">Reverse the Word of the String</option>
+         </select>
+         <button type="submit">Submit</button>
+      </form>
+      {{#if show}}
+      <h1>{{output}}</h1>
+      {{/if}}
+    </div>
+  </div>
+  
+</body>
+</html>
