@@ -287,7 +287,7 @@ app.post("", encoder, (req, res) => {
   // console.log(req.body);
   if (req.body.option === "1")
     var output = req.body.message.split("").reverse().join("");
-  else var output = req.body.message.split("").reverse().join("");
+  else var output = req.body.message.split("").reverse().join(" ");
 
   res.render("home.hbs", {
     show: true,
